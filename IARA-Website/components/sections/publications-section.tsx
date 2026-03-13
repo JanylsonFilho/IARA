@@ -9,38 +9,34 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
-import { Download, ExternalLink } from "lucide-react"
+import { ExternalLink } from "lucide-react"
 
 export function PublicationsSection() {
   const publications = [
     {
-      title: "Inteligência Artificial no Acompanhamento de Pacientes Diabéticos",
-      authors: "Silva, M.A.; Santos, J.R.; Oliveira, C.L.",
+      title: "Design, implementação e avaliação da MarIA, uma assistente virtual com tecnologia GPT-3.5 para apoiar pacientes com diabetes mellitus tipo 2 (DM)",
+      authors: "Vasco Furtado, Jorge Araujo, Elizabeth S Furtado, Rafael Bomfim, Vitória Silva, Nickolas Mororó, Lucas Vasconcelos, Cecília Carvalho, Marcos Severo, Juliana Torres, Juliana Oliveira, Antonio Bruno Freitas",
       summary:
-        "Estudo que avalia a eficácia do uso de assistentes virtuais baseados em IA para o acompanhamento contínuo de pacientes com Diabetes Tipo 2 no Sistema Único de Saúde.",
-      year: "2024",
+        "Este artigo apresenta o design, a implementação e a avaliação da MarIA, uma assistente virtual baseada no GPT-3.5 integrada a uma plataforma de mensagens para apoiar pacientes com diabetes mellitus tipo 2 (DM). A MarIA emprega uma arquitetura multiagente que permite diferentes estilos de diálogo e graus de personalização. Em um estudo longitudinal de 3 meses envolvendo 35 participantes, as interações personalizadas aumentaram o engajamento em 26%, enquanto o tamanho das mensagens mais que quadruplicou — gerando uma compreensão mais rica do contexto do paciente. Essa contextualização mais profunda permitiu que a MarIA iniciasse conversas mais relevantes e significativas, promovendo um ciclo positivo de engajamento contínuo. A segurança foi avaliada criticamente. Embora a MarIA não tenha gerado alucinações factuais, algumas sugestões gerais de saúde — embora precisas isoladamente — podem ser inapropriadas para usuários com restrições clínicas específicas.",
+      year: "2025",
+      link: "https://scholar.google.com.br/citations?view_op=view_citation&hl=pt-BR&user=UX9GgPgAAAAJ&sortby=pubdate&citation_for_view=UX9GgPgAAAAJ:bz8QjSJIRt4C"
     },
     {
-      title: "Teleconsulta e WhatsApp: Novos Caminhos para a Saúde Pública",
-      authors: "Costa, R.F.; Lima, P.S.; Martins, A.B.",
+      title: "Sistema Multiagente aplicado à atenção contínua à saúde",
+      authors: "Antônio Bruno de Carvalho Freitas, Elizabeth Furtado, Vasco Furtado",
       summary:
-        "Análise da integração de plataformas de mensagens instantâneas com sistemas de teleconsulta para melhorar o acesso à saúde em comunidades remotas.",
-      year: "2023",
+        "Este artigo propõe um sistema multiagente (SMA) para apoiar a atenção contínua à saúde de pacientes crônicos, com foco no diabetes tipo 2 (DT2). O SMA consiste em cinco agentes: Agente Paciente, Especialista em DT2, Nutricionista, Educador Físico e Psicólogo. Eles interagem para fornecer orientação personalizada, considerando os aspectos físicos e emocionais do paciente.",
+      year: "2025",
+      link: "https://scholar.google.com.br/citations?view_op=view_citation&hl=pt-BR&user=UX9GgPgAAAAJ&sortby=pubdate&citation_for_view=UX9GgPgAAAAJ:FAceZFleit8C"
     },
     {
-      title: "Redução de Filas no SUS através de Assistentes Digitais",
-      authors: "Ferreira, L.M.; Souza, T.C.; Almeida, R.J.",
+      title: "O Processo de Design Baseado na Abordagem de Design Science Research para a Concepção de um Assistente de Saúde como Apoio para Pacientes Diabéticos",
+      authors: "Marcos Severo, Vasco Furtado, Elizabeth Furtado",
       summary:
-        "Pesquisa quantitativa sobre o impacto da implementação de chatbots inteligentes na redução do tempo de espera para consultas especializadas no SUS.",
-      year: "2023",
-    },
-    {
-      title: "Adesão ao Tratamento de Doenças Crônicas com Suporte de IA",
-      authors: "Rodrigues, E.S.; Mendes, F.A.; Pereira, M.L.",
-      summary:
-        "Estudo longitudinal avaliando como lembretes automatizados e suporte contínuo via IA influenciam a adesão ao tratamento em pacientes crônicos.",
-      year: "2024",
-    },
+        "O diabetes é uma doença crônica que exige acompanhamento contínuo, frequentemente dificultado pela falta de recursos em sistemas públicos de saúde. Assistentes virtuais têm se mostrado promissores no apoio a esses pacientes, oferecendo suporte personalizado e reduzindo a sobrecarga dos profissionais de saúde. Este artigo descreve o processo de design para a concepção de um agente conversacional integrado ao WhatsApp, focado em ajudar pacientes com diabetes e fornecer informações.",
+      year: "2025",
+      link: "https://scholar.google.com.br/citations?view_op=view_citation&hl=pt-BR&user=UX9GgPgAAAAJ&sortby=pubdate&citation_for_view=UX9GgPgAAAAJ:4fGpz3EwCPoC"
+    }
   ]
 
   return (
@@ -65,15 +61,13 @@ export function PublicationsSection() {
                 </AccordionTrigger>
                 <AccordionContent>
                   <div className="flex flex-col gap-4 pb-4">
-                    <p className="text-muted-foreground">{pub.summary}</p>
-                    <div className="flex flex-wrap gap-3">
-                      <Button variant="outline" size="sm" className="gap-2 rounded-full border-border bg-transparent text-foreground hover:bg-secondary hover:text-foreground">
-                        <Download className="h-4 w-4" />
-                        Baixar PDF
-                      </Button>
-                      <Button variant="ghost" size="sm" className="gap-2 rounded-full text-muted-foreground hover:bg-secondary hover:text-foreground">
-                        <ExternalLink className="h-4 w-4" />
-                        Acessar Artigo
+                    <p className="text-muted-foreground text-justify">{pub.summary}</p>
+                    <div className="flex flex-wrap gap-3 mt-2">
+                      <Button variant="outline" size="sm" className="gap-2 rounded-full border-border bg-transparent text-foreground hover:bg-secondary hover:text-foreground" asChild>
+                        <a href={pub.link} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="h-4 w-4" />
+                          Acessar Artigo
+                        </a>
                       </Button>
                     </div>
                   </div>

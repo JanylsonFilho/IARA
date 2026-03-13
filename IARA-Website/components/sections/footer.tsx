@@ -4,6 +4,14 @@ import { AnimatedSection } from "@/components/animated-section"
 import { Stethoscope } from "lucide-react"
 
 export function Footer() {
+  const navLinks = [
+    { href: "#inicio", label: "Inicio" },
+    { href: "#sobre", label: "Quem Somos" },
+    { href: "#jornada", label: "Como Funciona" },
+    { href: "#vantagens", label: "Vantagens" },
+    { href: "#publicacoes", label: "Publicações" },
+  ]
+
   return (
     <footer className="border-t border-border bg-background py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -16,10 +24,12 @@ export function Footer() {
 
         <AnimatedSection delay={100} className="mt-8">
           <ul className="flex flex-wrap items-center justify-center gap-6 text-sm">
-            {["Inicio", "Quem Somos", "Como Funciona", "Vantagens", "Publicações"].map((link, index) => (
-              <li key={link}>
-                <a href="#" className="text-muted-foreground transition-colors hover:text-foreground">{link}</a>
-                {index < 4 && <span className="ml-6 text-border">|</span>}
+            {navLinks.map((link, index) => (
+              <li key={link.href} className="flex items-center">
+                <a href={link.href} className="text-muted-foreground transition-colors hover:text-foreground">
+                  {link.label}
+                </a>
+                {index < navLinks.length - 1 && <span className="ml-6 text-border">|</span>}
               </li>
             ))}
           </ul>
