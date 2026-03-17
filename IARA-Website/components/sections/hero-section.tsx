@@ -36,9 +36,6 @@ export function HeroSection() {
                     Falar com a IARA
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="gap-2 rounded-full border-border bg-transparent text-foreground hover:bg-secondary hover:text-foreground" asChild>
-                  <a href="/projeto">Conheça o Projeto</a>
-                </Button>
               </div>
             </div>
           </AnimatedSection>
@@ -48,13 +45,9 @@ export function HeroSection() {
               <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-card to-secondary p-1">
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/20 via-transparent to-primary/10" />
                 <div className="relative flex h-full min-h-[500px] flex-col items-center justify-start rounded-3xl bg-card p-8 pt-12">
-                  
-                  {/* Container da imagem ampliado e focado no topo */}
                   <div className="mb-10 flex h-48 w-48 items-center justify-center rounded-full bg-primary/10 shadow-xl">
                     <img src="/IARA-logo.jpeg" alt="IARA logo" className="h-44 w-44 rounded-full object-cover" />
                   </div>
-                  
-                  {/* Textos rebaixados */}
                   <div className="mt-8 flex flex-col items-center">
                     <h3 className="mb-2 text-3xl font-bold text-foreground">IARA</h3>
                     <p className="mb-6 text-center text-lg text-muted-foreground">Sua assistente de saúde digital</p>
@@ -63,7 +56,6 @@ export function HeroSection() {
                       <span className="text-sm font-medium text-primary">Disponível 24/7</span>
                     </div>
                   </div>
-
                 </div>
               </div>
               <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-primary/20 blur-3xl" />

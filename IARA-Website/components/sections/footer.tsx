@@ -6,10 +6,12 @@ import { Stethoscope } from "lucide-react"
 export function Footer() {
   const navLinks = [
     { href: "#inicio", label: "Inicio" },
+    { href: "#projeto", label: "O Projeto" },
     { href: "#sobre", label: "Quem Somos" },
     { href: "#jornada", label: "Como Funciona" },
     { href: "#vantagens", label: "Vantagens" },
     { href: "#publicacoes", label: "Publicações" },
+    { href: "#contato", label: "Contato" },
   ]
 
   return (

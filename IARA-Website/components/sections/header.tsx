@@ -17,7 +17,8 @@ export function Header() {
   }, [])
 
   const navLinks = [
-    { href: "#inicio", label: "Inicio" },
+    { href: "#inicio", label: "Início" },
+    { href: "#projeto", label: "O Projeto" },
     { href: "#sobre", label: "Quem Somos" },
     { href: "#jornada", label: "Como Funciona" },
     { href: "#vantagens", label: "Vantagens" },
@@ -56,8 +57,11 @@ export function Header() {
           ))}
         </ul>
 
+        {/* Botão Desktop atualizado para link de âncora */}
         <div className="hidden lg:block">
-          <Button className="rounded-full bg-primary px-6 text-primary-foreground hover:bg-primary/90">Fale Conosco</Button>
+          <Button className="rounded-full bg-primary px-6 text-primary-foreground hover:bg-primary/90" asChild>
+            <a href="#contato">Fale Conosco</a>
+          </Button>
         </div>
 
         <button type="button" className="lg:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}>
@@ -75,8 +79,11 @@ export function Header() {
                 </a>
               </li>
             ))}
+            {/* Botão Mobile atualizado */}
             <li className="pt-4">
-              <Button className="w-full rounded-full bg-primary text-primary-foreground">Fale Conosco</Button>
+              <Button className="w-full rounded-full bg-primary text-primary-foreground" asChild>
+                <a href="#contato" onClick={() => setMobileMenuOpen(false)}>Fale Conosco</a>
+              </Button>
             </li>
           </ul>
         </div>
