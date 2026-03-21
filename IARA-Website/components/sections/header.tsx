@@ -29,18 +29,18 @@ export function Header() {
     <header
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${
         scrolled
-          ? "border-b border-border bg-background/95 backdrop-blur-md"
+          ? "border-b border-[#00A0DC] bg-[#FFE6CB]/95 backdrop-blur-md"
           : "bg-transparent"
       }`}
     >
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a href="#" className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary">
-            <Stethoscope className="h-6 w-6 text-primary-foreground" />
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#F15A22]">
+            <Stethoscope className="h-6 w-6 text-white" />
           </div>
           <div className="flex flex-col">
-            <span className="text-xl font-bold text-foreground">IARA</span>
-            <span className="text-xs text-muted-foreground">Saúde Integrada no SUS</span>
+            <span className="text-xl font-bold text-[#325565]">IARA</span>
+            <span className="text-xs text-[#414042]">Saúde Integrada no SUS</span>
           </div>
         </a>
 
@@ -49,7 +49,7 @@ export function Header() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+                className="relative text-sm font-medium text-[#414042] transition-colors hover:text-[#325565] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[#F15A22] after:transition-all hover:after:w-full"
               >
                 {link.label}
               </a>
@@ -59,29 +59,29 @@ export function Header() {
 
         {/* Botão Desktop atualizado para link de âncora */}
         <div className="hidden lg:block">
-          <Button className="rounded-full bg-primary px-6 text-primary-foreground hover:bg-primary/90" asChild>
+          <Button className="rounded-full bg-[#F15A22] px-6 text-white hover:bg-[#D94610]" asChild>
             <a href="#contato">Fale Conosco</a>
           </Button>
         </div>
 
         <button type="button" className="lg:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}>
-          {mobileMenuOpen ? <X className="h-6 w-6 text-foreground" /> : <Menu className="h-6 w-6 text-foreground" />}
+          {mobileMenuOpen ? <X className="h-6 w-6 text-[#325565]" /> : <Menu className="h-6 w-6 text-[#325565]" />}
         </button>
       </nav>
 
       {mobileMenuOpen && (
-        <div className="border-t border-border bg-background lg:hidden">
+        <div className="border-t border-[#00A0DC]/30 bg-[#FFE6CB] lg:hidden">
           <ul className="flex flex-col gap-4 px-4 py-6">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a href={link.href} className="block text-sm font-medium text-muted-foreground transition-colors hover:text-foreground" onClick={() => setMobileMenuOpen(false)}>
+                <a href={link.href} className="block text-sm font-medium text-[#414042] transition-colors hover:text-[#325565]" onClick={() => setMobileMenuOpen(false)}>
                   {link.label}
                 </a>
               </li>
             ))}
             {/* Botão Mobile atualizado */}
             <li className="pt-4">
-              <Button className="w-full rounded-full bg-primary text-primary-foreground" asChild>
+              <Button className="w-full rounded-full bg-[#F15A22] text-white" asChild>
                 <a href="#contato" onClick={() => setMobileMenuOpen(false)}>Fale Conosco</a>
               </Button>
             </li>

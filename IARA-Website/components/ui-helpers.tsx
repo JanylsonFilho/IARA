@@ -5,7 +5,7 @@ import { useInView } from "@/components/animated-section"
 
 export function SectionBadge({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-flex items-center rounded-full border border-border bg-secondary px-4 py-1.5 text-sm font-medium text-foreground">
+    <span className="inline-flex items-center rounded-full border border-[#00A0DC]/30 bg-[#00A0DC]/10 px-4 py-1.5 text-sm font-medium text-[#00A0DC]">
       {children}
     </span>
   )
@@ -15,7 +15,7 @@ export function FeatureCard({
   icon: Icon,
   title,
   description,
-  gradientColor = "from-primary",
+  gradientColor = "from-[#F15A22]",
   delay = 0,
 }: {
   icon: React.ElementType
@@ -29,7 +29,7 @@ export function FeatureCard({
   return (
     <div
       ref={ref}
-      className={`group relative overflow-hidden rounded-2xl bg-card p-6 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/10`}
+      className={`group relative overflow-hidden rounded-2xl bg-white p-6 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#F15A22]/10`}
       style={{
         opacity: isInView ? 1 : 0,
         transform: isInView ? "translateY(0)" : "translateY(30px)",
@@ -40,12 +40,12 @@ export function FeatureCard({
         className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r ${gradientColor} to-transparent`}
       />
 
-      <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/20 text-primary transition-transform duration-300 group-hover:scale-110">
+      <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#F15A22]/20 text-[#F15A22] transition-transform duration-300 group-hover:scale-110">
         <Icon className="h-7 w-7" />
       </div>
 
-      <h3 className="mb-2 text-lg font-bold text-foreground">{title}</h3>
-      <p className="text-sm leading-relaxed text-muted-foreground">{description}</p>
+      <h3 className="mb-2 text-lg font-bold text-[#325565]">{title}</h3>
+      <p className="text-sm leading-relaxed text-[#414042]">{description}</p>
     </div>
   )
 }

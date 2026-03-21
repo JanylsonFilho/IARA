@@ -1,7 +1,6 @@
 "use client"
 
 import { AnimatedSection } from "@/components/animated-section"
-import { SectionBadge } from "@/components/ui-helpers"
 import { Mic, Clock, Users } from "lucide-react"
 
 export function HealthProfessionalsSection() {
@@ -30,52 +29,51 @@ export function HealthProfessionalsSection() {
   ]
 
   return (
-    <section id="vantagens" className="py-20 sm:py-28">
+    <section id="vantagens" className="py-20 sm:py-28 bg-[#FFE6CB]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <AnimatedSection>
             <div className="relative">
-              <div className="aspect-square overflow-hidden rounded-3xl bg-gradient-to-br from-primary/10 via-card to-primary/5 p-8">
+              <div className="aspect-square overflow-hidden rounded-3xl bg-gradient-to-br from-[#F15A22]/10 via-white to-[#F15A22]/5 p-8">
                 <div className="flex h-full flex-col items-center justify-center gap-6">
-                  <div className="flex h-28 w-28 items-center justify-center rounded-full bg-primary/20 text-primary shadow-lg transition-transform duration-500 hover:scale-110">
+                  <div className="flex h-28 w-28 items-center justify-center rounded-full bg-[#F15A22]/20 text-[#F15A22] shadow-lg transition-transform duration-500 hover:scale-110">
                     <Mic className="h-14 w-14" />
                   </div>
                   <div className="text-center">
-                    <p className="text-xl font-bold text-foreground">Transcricao Inteligente</p>
-                    <p className="mt-2 text-muted-foreground">Fale naturalmente e deixe a IA transcrever</p>
+                    <p className="text-xl font-bold text-[#325565]">Transcricao Inteligente</p>
+                    <p className="mt-2 text-[#414042]">Fale naturalmente e deixe a IA transcrever</p>
                   </div>
                   <div className="flex items-center gap-1">
                     {[24, 32, 20, 36, 28, 22, 30].map((height, i) => (
-                      <div key={i} className="w-1.5 animate-pulse rounded-full bg-primary" style={{ animationDelay: `${i * 0.1}s`, height: `${height}px` }} />
+                      <div key={i} className="w-1.5 animate-pulse rounded-full bg-[#F15A22]" style={{ animationDelay: `${i * 0.1}s`, height: `${height}px` }} />
                     ))}
                   </div>
                 </div>
               </div>
-              <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-primary/20 blur-3xl" />
-              <div className="absolute -bottom-8 -left-8 h-40 w-40 rounded-full bg-primary/10 blur-3xl" />
+              <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-[#F15A22]/20 blur-3xl" />
+              <div className="absolute -bottom-8 -left-8 h-40 w-40 rounded-full bg-[#009889]/10 blur-3xl" />
             </div>
           </AnimatedSection>
 
           <AnimatedSection delay={200}>
             <div>
-              <SectionBadge>Para Profissionais</SectionBadge>
-              <h2 className="mt-6 text-balance text-3xl font-bold text-foreground sm:text-4xl">Vantagens para Profissionais de <span className="text-primary">Saúde</span></h2>
-              <p className="mt-4 text-lg text-muted-foreground">A IARA não apenas ajuda os pacientes, mas também otimiza o trabalho dos profissionais de saúde no SUS.</p>
+              <h2 className="text-balance text-3xl font-bold text-[#325565] sm:text-4xl">Vantagens para Profissionais de <span className="text-[#F15A22]">Saúde</span></h2>
+              <p className="mt-4 text-lg text-[#414042]">A IARA não apenas ajuda os pacientes, mas também otimiza o trabalho dos profissionais de saúde no SUS.</p>
 
               <div className="mt-8 space-y-4">
                 {benefits.map((benefit, index) => (
-                  <div key={index} className={`group flex gap-4 rounded-2xl p-5 transition-all duration-300 hover:-translate-x-1 ${benefit.highlight ? "border border-primary/30 bg-primary/10" : "border border-border bg-card"}`}>
-                    <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full transition-transform duration-300 group-hover:scale-110 ${benefit.highlight ? "bg-primary text-primary-foreground" : "bg-primary/20 text-primary"}`}>
+                  <div key={index} className={`group flex gap-4 rounded-2xl p-5 transition-all duration-300 hover:-translate-x-1 ${benefit.highlight ? "border border-[#F15A22]/30 bg-[#F15A22]/10" : "border border-[#00A0DC]/30 bg-white"}`}>
+                    <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full transition-transform duration-300 group-hover:scale-110 ${benefit.highlight ? "bg-[#F15A22] text-white" : "bg-[#00A0DC]/20 text-[#00A0DC]"}`}>
                       <benefit.icon className="h-6 w-6" />
                     </div>
                     <div>
-                      <h3 className="flex items-center gap-2 font-bold text-foreground">
+                      <h3 className="flex items-center gap-2 font-bold text-[#325565]">
                         {benefit.title}
                         {benefit.highlight && (
-                          <span className="rounded-full bg-primary px-2 py-0.5 text-xs font-medium text-primary-foreground">Destaque</span>
+                          <span className="rounded-full bg-[#F15A22] px-2 py-0.5 text-xs font-medium text-white">Destaque</span>
                         )}
                       </h3>
-                      <p className="mt-1 text-sm text-muted-foreground">{benefit.description}</p>
+                      <p className="mt-1 text-sm text-[#414042]">{benefit.description}</p>
                     </div>
                   </div>
                 ))}

@@ -1,7 +1,6 @@
 "use client"
 
 import { AnimatedSection } from "@/components/animated-section"
-import { SectionBadge } from "@/components/ui-helpers"
 import { Button } from "@/components/ui/button"
 import { Mail, MapPin } from "lucide-react"
 
@@ -14,30 +13,28 @@ const WhatsAppIcon = (props: any) => (
 
 export function ContactSection() {
   return (
-    <section id="contato" className="py-20 sm:py-28 bg-card/50">
+    <section id="contato" className="py-20 sm:py-28 bg-[#FFE6CB]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center">
-          <SectionBadge>Fale Conosco</SectionBadge>
-          <h2 className="mt-6 text-balance text-3xl font-bold text-foreground sm:text-4xl">
-            Entre em <span className="text-primary">Contato</span>
+          <h2 className="text-balance text-3xl font-bold text-[#325565] sm:text-4xl">
+            Entre em <span className="text-[#F15A22]">Contato</span>
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-[#414042]">
             Tem interesse em parcerias, pesquisas ou quer saber mais detalhes institucionais? Fale com a nossa equipe.
           </p>
         </AnimatedSection>
 
         <div className="mt-16 grid gap-6 sm:grid-cols-3">
-          {/* Card do WhatsApp Institucional */}
           <AnimatedSection delay={100}>
-            <div className="group relative flex h-full flex-col items-center overflow-hidden rounded-2xl border border-border bg-card p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5">
-              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/20 text-primary transition-transform duration-300 group-hover:scale-110">
+            <div className="group relative flex h-full flex-col items-center overflow-hidden rounded-2xl border border-[#00A0DC]/30 bg-white p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#F15A22]/50 hover:shadow-xl hover:shadow-[#F15A22]/5">
+              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#F15A22]/20 text-[#F15A22] transition-transform duration-300 group-hover:scale-110">
                 <WhatsAppIcon className="h-8 w-8" />
               </div>
-              <h3 className="mb-2 text-xl font-bold text-foreground">WhatsApp Institucional</h3>
-              <p className="mb-6 flex-1 text-sm text-muted-foreground">
+              <h3 className="mb-2 text-xl font-bold text-[#325565]">WhatsApp Institucional</h3>
+              <p className="mb-6 flex-1 text-sm text-[#414042]">
                 Atendimento voltado para gestores de saúde e parcerias acadêmicas.
               </p>
-              <Button className="w-full gap-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90" asChild>
+              <Button className="w-full gap-2 rounded-full bg-[#F15A22] text-white hover:bg-[#D94610]" asChild>
                 <a href="https://wa.me/5585989551746?text=Olá! Gostaria de saber mais informações institucionais sobre o projeto IARA." target="_blank" rel="noopener noreferrer">
                   (85) 98955-1746
                 </a>
@@ -47,15 +44,15 @@ export function ContactSection() {
 
           {/* Card de E-mail */}
           <AnimatedSection delay={200}>
-            <div className="group relative flex h-full flex-col items-center overflow-hidden rounded-2xl border border-border bg-card p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5">
-              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/20 text-primary transition-transform duration-300 group-hover:scale-110">
+            <div className="group relative flex h-full flex-col items-center overflow-hidden rounded-2xl border border-[#00A0DC]/30 bg-white p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#F15A22]/50 hover:shadow-xl hover:shadow-[#F15A22]/5">
+              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#00A0DC]/20 text-[#00A0DC] transition-transform duration-300 group-hover:scale-110">
                 <Mail className="h-8 w-8" />
               </div>
-              <h3 className="mb-2 text-xl font-bold text-foreground">E-mail</h3>
-              <p className="mb-6 flex-1 text-sm text-muted-foreground">
+              <h3 className="mb-2 text-xl font-bold text-[#325565]">E-mail</h3>
+              <p className="mb-6 flex-1 text-sm text-[#414042]">
                 Envie suas propostas, dúvidas técnicas ou agende uma apresentação.
               </p>
-              <Button variant="outline" className="w-full gap-2 rounded-full border-border bg-transparent text-foreground hover:bg-secondary hover:text-foreground" asChild>
+              <Button variant="outline" className="w-full gap-2 rounded-full border-[#00A0DC]/30 bg-transparent text-[#325565] hover:bg-[#00A0DC]/10 hover:text-[#325565]" asChild>
                 <a href="mailto:janylsonfilho@edu.unifor.br?subject=Interesse Institucional - Projeto IARA">
                   Enviar E-mail
                 </a>
@@ -65,15 +62,15 @@ export function ContactSection() {
 
           {/* Card de Localização */}
           <AnimatedSection delay={300}>
-            <div className="group relative flex h-full flex-col items-center overflow-hidden rounded-2xl border border-border bg-card p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5">
-              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/20 text-primary transition-transform duration-300 group-hover:scale-110">
+            <div className="group relative flex h-full flex-col items-center overflow-hidden rounded-2xl border border-[#00A0DC]/30 bg-white p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#F15A22]/50 hover:shadow-xl hover:shadow-[#F15A22]/5">
+              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#00A0DC]/20 text-[#00A0DC] transition-transform duration-300 group-hover:scale-110">
                 <MapPin className="h-8 w-8" />
               </div>
-              <h3 className="mb-2 text-xl font-bold text-foreground">Localização</h3>
-              <p className="mb-6 flex-1 text-sm text-muted-foreground">
+              <h3 className="mb-2 text-xl font-bold text-[#325565]">Localização</h3>
+              <p className="mb-6 flex-1 text-sm text-[#414042]">
                 Desenvolvido no laboratório da Universidade de Fortaleza (UNIFOR).
               </p>
-              <Button variant="outline" className="w-full gap-2 rounded-full border-border bg-transparent text-foreground hover:bg-secondary hover:text-foreground" asChild>
+              <Button variant="outline" className="w-full gap-2 rounded-full border-[#00A0DC]/30 bg-transparent text-[#325565] hover:bg-[#00A0DC]/10 hover:text-[#325565]" asChild>
                 <a href="https://www.google.com/maps/search/Universidade+de+Fortaleza+-+UNIFOR/" target="_blank" rel="noopener noreferrer">
                   Ver no Mapa
                 </a>
