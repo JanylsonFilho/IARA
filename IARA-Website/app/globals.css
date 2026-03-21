@@ -6,104 +6,99 @@
 
 :root {
   /* ==========================================
-     3. CREME (FUNDO E BASE)
-     Substitua pelo HEX do Creme da foto
+     BACKGROUND - Bege Claro
   ========================================== */
-  --background: #FCFBF8; 
-  --card: #FFFFFF; /* Mantive os cards brancos para destacar do fundo creme, mas pode mudar para o creme se preferir */
+  --background: #FFE6CB; 
+  --card: #FFFFFF; /* Cards brancos para destacar do fundo */
   
   /* ==========================================
-     4. MARROM OU AZUL ESCURO (TEXTOS E LEITURA)
-     Substitua pelo HEX do Marrom ou Azul mais escuro da foto
+     TYPOGRAPHY - Azul Escuro e Cinza
   ========================================== */
-  --foreground: #2B1D14; 
-  --card-foreground: #2B1D14;
+  --foreground: #325565; /* Azul escuro para textos principais */
+  --card-foreground: #325565;
   --popover: #FFFFFF;
-  --popover-foreground: #2B1D14;
+  --popover-foreground: #325565;
   
   /* ==========================================
-     1. LARANJA (COR DE MAIOR DESTAQUE)
-     Substitua pelo HEX do Laranja da foto
+     PRIMARY - Laranja
   ========================================== */
-  --primary: #F26522; 
-  --primary-foreground: #ffffff; /* Texto branco em cima do botão laranja */
-  --ring: #F26522; /* Efeito de foco ao clicar */
+  --primary: #F15A22; /* Laranja - Cor primária */
+  --primary-foreground: #ffffff; /* Texto branco em cima do botão */
+  --ring: #F15A22; /* Efeito de foco */
   
   /* ==========================================
-     2. VERDE (COR DE APOIO/SECUNDÁRIA)
-     Substitua pelo HEX do Verde da foto
+     SECONDARY - Verde
   ========================================== */
-  --secondary: #10B981; 
+  --secondary: #009889; /* Verde - Cor secundária */
   --secondary-foreground: #ffffff;
   
   /* ==========================================
-     4. AZUL / MARROM (DETALHES E BORDAS)
-     Substitua pelo HEX do Azul e do Marrom claro
+     ACCENT - Azul para Detalhes
   ========================================== */
-  --accent: #1E3A8A; /* HEX do Azul */
+  --accent: #00A0DC; /* Azul para detalhes */
   --accent-foreground: #ffffff;
-  --muted: #F3EFEA; /* Um tom misturado de creme com marrom bem claro para áreas inativas */
-  --muted-foreground: #786C60; /* Texto secundário (ex: "Sua assistente digital") */
-  --border: #E6E0D8; /* Cor das linhas e bordas */
-  --input: #E6E0D8;
+  --muted: #FFF0E0; /* Tom mais claro do bege para áreas inativas */
+  --muted-foreground: #414042; /* Cinza para texto secundário */
+  --border: #D4CCBF; /* Bordas suaves */
+  --input: #D4CCBF;
   
   --destructive: #dc3545;         
   --destructive-foreground: #ffffff;
   
   /* Paleta para os Gráficos / Elementos dinâmicos */
-  --chart-1: #F26522; /* Laranja */
-  --chart-2: #10B981; /* Verde */
-  --chart-3: #1E3A8A; /* Azul */
-  --chart-4: #8B4513; /* Marrom */
-  --chart-5: #FCFBF8; /* Creme */
+  --chart-1: #F15A22; /* Laranja */
+  --chart-2: #009889; /* Verde */
+  --chart-3: #00A0DC; /* Azul */
+  --chart-4: #325565; /* Azul escuro */
+  --chart-5: #FFE6CB; /* Bege */
   
   --radius: 0.75rem;
   
-  /* Cores do Menu Lateral (se houver) */
-  --sidebar: #FCFBF8;
-  --sidebar-foreground: #2B1D14;
-  --sidebar-primary: #F26522;
+  /* Cores do Menu Lateral */
+  --sidebar: #FFE6CB;
+  --sidebar-foreground: #325565;
+  --sidebar-primary: #F15A22;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #F3EFEA;
-  --sidebar-accent-foreground: #2B1D14;
-  --sidebar-border: #E6E0D8;
-  --sidebar-ring: #F26522;
+  --sidebar-accent: #FFF0E0;
+  --sidebar-accent-foreground: #325565;
+  --sidebar-border: #D4CCBF;
+  --sidebar-ring: #F15A22;
 }
 
 .dark {
-  /* Deixando o dark mode com as cores padrão antigas, caso queira configurar depois */
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: #F26522;
+  /* Dark mode com a nova paleta de cores */
+  --background: #1a1a1a;
+  --foreground: #E8E4DF;
+  --card: #2a2a2a;
+  --card-foreground: #E8E4DF;
+  --popover: #2a2a2a;
+  --popover-foreground: #E8E4DF;
+  --primary: #F15A22;
   --primary-foreground: #ffffff;
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: #F26522;
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
+  --secondary: #009889;
+  --secondary-foreground: #ffffff;
+  --muted: #3a3a3a;
+  --muted-foreground: #A8A3A0;
+  --accent: #00A0DC;
+  --accent-foreground: #ffffff;
+  --destructive: #dc3545;
+  --destructive-foreground: #ffffff;
+  --border: #3a3a3a;
+  --input: #3a3a3a;
+  --ring: #F15A22;
+  --chart-1: #F15A22;
+  --chart-2: #009889;
+  --chart-3: #00A0DC;
+  --chart-4: #7BA4C4;
+  --chart-5: #3a3a3a;
+  --sidebar: #1a1a1a;
+  --sidebar-foreground: #E8E4DF;
+  --sidebar-primary: #F15A22;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #3a3a3a;
+  --sidebar-accent-foreground: #E8E4DF;
+  --sidebar-border: #3a3a3a;
+  --sidebar-ring: #F15A22;
 }
 
 @theme inline {

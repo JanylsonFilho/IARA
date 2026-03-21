@@ -13,22 +13,23 @@ const WhatsAppIcon = (props: any) => (
 export function HeroSection() {
   return (
     <section id="inicio" className="relative min-h-screen overflow-hidden pt-20">
-      <div className="absolute inset-0 bg-[#FFE6CB]" />
+      {/* Fundo da Hero Section: Branco (bg-card) para dar contraste com o Header */}
+      <div className="absolute inset-0 bg-white dark:bg-background" />
 
       <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <AnimatedSection>
             <div className="flex flex-col gap-6">
-              <h1 className="text-balance text-4xl font-bold tracking-tight text-[#325565] sm:text-5xl lg:text-6xl">
-                IARA - <span className="text-[#F15A22]">Saúde</span> na palma da mão.
+              <h1 className="text-balance text-4xl font-bold tracking-tight text-[#325565] dark:text-foreground sm:text-5xl lg:text-6xl">
+                IARA - <span className="text-primary">Saúde</span> na palma da mão.
               </h1>
               
-              <p className="text-pretty text-lg leading-relaxed text-[#414042] sm:text-xl">
-                A jornada que começou como um projeto acadêmico evoluiu para a <strong className="text-[#F15A22]">IARA - Assistente de Saúde Inteligente</strong>. Continuamos transformando vidas através da tecnologia, agregando o potencial transformador da IA para o amanhã.
+              <p className="text-pretty text-lg leading-relaxed text-[#414042] dark:text-muted-foreground sm:text-xl">
+                A jornada que começou como um projeto acadêmico evoluiu para a <strong className="text-primary">IARA - Assistente de Saúde Inteligente</strong>. Continuamos transformando vidas através da tecnologia, agregando o potencial transformador da IA para o amanhã.
               </p>
               
               <div className="flex flex-col gap-4 pt-4 sm:flex-row">
-                <Button size="lg" className="gap-2 rounded-full bg-[#F15A22] px-8 text-white hover:bg-[#D94610]" asChild>
+                <Button size="lg" className="gap-2 rounded-full bg-primary px-8 text-white hover:bg-primary/90" asChild>
                   <a href="https://wa.me/5585997672266" target="_blank" rel="noopener noreferrer">
                     <WhatsAppIcon className="h-5 w-5" />
                     Falar com a IARA
@@ -42,19 +43,22 @@ export function HeroSection() {
             <div className="relative">
               <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#F15A22] to-[#009889] p-1">
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#F15A22]/20 via-transparent to-[#009889]/10" />
-                <div className="relative flex h-full min-h-[500px] flex-col items-center justify-start rounded-3xl bg-white p-8 pt-12">
+                
+                {/* Fundo do Card interno: Creme (bg-[#FFE6CB]) para amarrar com o Header */}
+                <div className="relative flex h-full min-h-[500px] flex-col items-center justify-start rounded-3xl bg-[#FFE6CB] dark:bg-card p-8 pt-12">
                   <div className="mb-10 flex h-48 w-48 items-center justify-center rounded-full bg-[#00A0DC]/10 shadow-xl">
                     <img src="/IARA-logo.jpeg" alt="IARA logo" className="h-44 w-44 rounded-full object-cover" />
                   </div>
                   <div className="mt-8 flex flex-col items-center">
-                    <h3 className="mb-2 text-3xl font-bold text-[#325565]">IARA</h3>
-                    <p className="mb-6 text-center text-lg text-[#414042]">Sua assistente de saúde digital</p>
+                    <h3 className="mb-2 text-3xl font-bold text-[#325565] dark:text-foreground">IARA</h3>
+                    <p className="mb-6 text-center text-lg text-[#414042] dark:text-muted-foreground">Sua assistente de saúde digital</p>
                     <div className="flex items-center gap-2 rounded-full bg-[#00A0DC]/10 px-4 py-2">
                       <span className="h-2 w-2 animate-pulse rounded-full bg-[#00A0DC]" />
                       <span className="text-sm font-medium text-[#00A0DC]">Disponível 24/7</span>
                     </div>
                   </div>
                 </div>
+
               </div>
               <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-[#F15A22]/20 blur-3xl" />
               <div className="absolute -bottom-8 -left-8 h-40 w-40 rounded-full bg-[#009889]/10 blur-3xl" />
