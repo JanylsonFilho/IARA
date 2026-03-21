@@ -46,16 +46,19 @@ export function HeroSection() {
                 
                 {/* Fundo do Card interno: Creme (bg-[#FFE6CB]) para amarrar com o Header */}
                 <div className="relative flex h-full min-h-[500px] flex-col items-center justify-start rounded-3xl bg-[#FFE6CB] dark:bg-card p-8 pt-12">
-                  <div className="mb-10 flex h-48 w-48 items-center justify-center rounded-full bg-[#00A0DC]/10 shadow-xl">
+                  <div className="mb-8 flex h-48 w-48 items-center justify-center rounded-full bg-[#00A0DC]/10 shadow-xl">
                     <img src="/IARA-logo.jpeg" alt="IARA logo" className="h-44 w-44 rounded-full object-cover" />
                   </div>
-                  <div className="mt-8 flex flex-col items-center">
-                    <h3 className="mb-2 text-3xl font-bold text-[#325565] dark:text-foreground">IARA</h3>
-                    <p className="mb-6 text-center text-lg text-[#414042] dark:text-muted-foreground">Sua assistente de saúde digital</p>
-                    <div className="flex items-center gap-2 rounded-full bg-[#00A0DC]/10 px-4 py-2">
-                      <span className="h-2 w-2 animate-pulse rounded-full bg-[#00A0DC]" />
-                      <span className="text-sm font-medium text-[#00A0DC]">Disponível 24/7</span>
-                    </div>
+                  
+                  {/* Textos atualizados com o significado em tupi-guarani e sem o badge */}
+                  <div className="mt-4 flex flex-col items-center text-center px-2">
+                    <h3 className="mb-1 text-3xl font-bold text-[#325565] dark:text-foreground">IARA</h3>
+                    <span className="mb-3 text-sm font-semibold text-primary uppercase tracking-widest">
+                      Do tupi-guarani y-îara
+                    </span>
+                    <p className="mb-6 text-base text-[#414042] dark:text-muted-foreground leading-relaxed">
+                      "Senhora das águas". Assim como a lenda que protege os rios, a IARA nasceu para guiar, cuidar e facilitar a sua jornada de saúde no SUS.
+                    </p>
                   </div>
                 </div>
 

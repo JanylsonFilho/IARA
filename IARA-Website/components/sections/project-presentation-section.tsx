@@ -121,9 +121,6 @@ export function ProjectPresentationSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <AnimatedSection>
           <div className="mb-12 text-center">
-            <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-[#00A0DC]/20 px-4 py-1.5 text-sm font-medium text-[#00A0DC]">
-              Conheça o Projeto
-            </span>
             <h2 className="mb-4 text-balance text-3xl font-bold tracking-tight text-[#325565] sm:text-4xl">
               O que é a <span className="text-[#F15A22]">IARA</span>?
             </h2>
