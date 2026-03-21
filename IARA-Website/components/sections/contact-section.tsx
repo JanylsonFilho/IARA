@@ -17,7 +17,7 @@ export function ContactSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center">
           <h2 className="text-balance text-3xl font-bold text-[#325565] sm:text-4xl">
-            Entre em <span className="text-[#F15A22]">Contato</span>
+            Entre em Contato
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-xl text-[#414042]">
             Tem interesse em parcerias, pesquisas ou quer saber mais detalhes institucionais? Fale com a nossa equipe.

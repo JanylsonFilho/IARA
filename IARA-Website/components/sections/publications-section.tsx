@@ -42,7 +42,7 @@ export function PublicationsSection() {
     <section id="publicacoes" className="bg-[#FFE6CB] py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center">
-          <h2 className="text-balance text-3xl font-bold text-[#325565] sm:text-4xl">Publicações <span className="text-[#F15A22]">Científicas</span></h2>
+          <h2 className="text-balance text-3xl font-bold text-[#325565] sm:text-4xl">Publicações Científicas</h2>
           <p className="mx-auto mt-4 max-w-2xl text-xl text-[#414042]">Conheça os estudos e pesquisas que embasam o desenvolvimento da IARA.</p>
         </AnimatedSection>
 

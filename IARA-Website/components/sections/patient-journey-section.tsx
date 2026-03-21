@@ -41,7 +41,7 @@ export function PatientJourneySection() {
     <section id="jornada" className="py-20 sm:py-28 bg-[#FFE6CB]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center">
-          <h2 className="text-balance text-3xl font-bold text-[#325565] sm:text-4xl">A Jornada do <span className="text-[#F15A22]">Paciente</span></h2>
+          <h2 className="text-balance text-3xl font-bold text-[#325565] sm:text-4xl">A Jornada do Paciente</h2>
           <p className="mx-auto mt-4 max-w-2xl text-xl text-[#414042]">Veja como funciona o acompanhamento inteligente da IARA em 4 passos simples.</p>
         </AnimatedSection>
 
