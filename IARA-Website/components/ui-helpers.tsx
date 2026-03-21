@@ -5,7 +5,7 @@ import { useInView } from "@/components/animated-section"
 
 export function SectionBadge({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-flex items-center rounded-full border border-[#00A0DC]/30 bg-[#00A0DC]/10 px-4 py-1.5 text-sm font-medium text-[#00A0DC]">
+    <span className="inline-flex items-center rounded-full border border-[#00A0DC]/30 bg-[#00A0DC]/10 px-4 py-1.5 text-base font-medium text-[#00A0DC]">
       {children}
     </span>
   )
@@ -44,8 +44,8 @@ export function FeatureCard({
         <Icon className="h-7 w-7" />
       </div>
 
-      <h3 className="mb-2 text-lg font-bold text-[#325565]">{title}</h3>
-      <p className="text-sm leading-relaxed text-[#414042]">{description}</p>
+      <h3 className="mb-2 text-xl font-bold text-[#325565]">{title}</h3>
+      <p className="text-base leading-relaxed text-[#414042]">{description}</p>
     </div>
   )
 }

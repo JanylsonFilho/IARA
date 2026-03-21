@@ -19,7 +19,7 @@ export function ContactSection() {
           <h2 className="text-balance text-3xl font-bold text-[#325565] sm:text-4xl">
             Entre em <span className="text-[#F15A22]">Contato</span>
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-[#414042]">
+          <p className="mx-auto mt-4 max-w-2xl text-xl text-[#414042]">
             Tem interesse em parcerias, pesquisas ou quer saber mais detalhes institucionais? Fale com a nossa equipe.
           </p>
         </AnimatedSection>
@@ -31,7 +31,7 @@ export function ContactSection() {
                 <WhatsAppIcon className="h-8 w-8" />
               </div>
               <h3 className="mb-2 text-xl font-bold text-[#325565]">WhatsApp Institucional</h3>
-              <p className="mb-6 flex-1 text-sm text-[#414042]">
+              <p className="mb-6 flex-1 text-base text-[#414042]">
                 Atendimento voltado para gestores de saúde e parcerias acadêmicas.
               </p>
               <Button className="w-full gap-2 rounded-full bg-[#F15A22] text-white hover:bg-[#D94610]" asChild>
@@ -49,7 +49,7 @@ export function ContactSection() {
                 <Mail className="h-8 w-8" />
               </div>
               <h3 className="mb-2 text-xl font-bold text-[#325565]">E-mail</h3>
-              <p className="mb-6 flex-1 text-sm text-[#414042]">
+              <p className="mb-6 flex-1 text-base text-[#414042]">
                 Envie suas propostas, dúvidas técnicas ou agende uma apresentação.
               </p>
               <Button variant="outline" className="w-full gap-2 rounded-full border-[#00A0DC]/30 bg-transparent text-[#325565] hover:bg-[#00A0DC]/10 hover:text-[#325565]" asChild>
@@ -67,7 +67,7 @@ export function ContactSection() {
                 <MapPin className="h-8 w-8" />
               </div>
               <h3 className="mb-2 text-xl font-bold text-[#325565]">Localização</h3>
-              <p className="mb-6 flex-1 text-sm text-[#414042]">
+              <p className="mb-6 flex-1 text-base text-[#414042]">
                 Desenvolvido no laboratório da Universidade de Fortaleza (UNIFOR).
               </p>
               <Button variant="outline" className="w-full gap-2 rounded-full border-[#00A0DC]/30 bg-transparent text-[#325565] hover:bg-[#00A0DC]/10 hover:text-[#325565]" asChild>

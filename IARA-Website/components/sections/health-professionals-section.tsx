@@ -58,7 +58,7 @@ export function HealthProfessionalsSection() {
           <AnimatedSection delay={200}>
             <div>
               <h2 className="text-balance text-3xl font-bold text-[#325565] sm:text-4xl">Vantagens para Profissionais de <span className="text-[#F15A22]">Saúde</span></h2>
-              <p className="mt-4 text-lg text-[#414042]">A IARA não apenas ajuda os pacientes, mas também otimiza o trabalho dos profissionais de saúde no SUS.</p>
+              <p className="mt-4 text-xl text-[#414042]">A IARA não apenas ajuda os pacientes, mas também otimiza o trabalho dos profissionais de saúde no SUS.</p>
 
               <div className="mt-8 space-y-4">
                 {benefits.map((benefit, index) => (
@@ -73,7 +73,7 @@ export function HealthProfessionalsSection() {
                           <span className="rounded-full bg-[#F15A22] px-2 py-0.5 text-xs font-medium text-white">Destaque</span>
                         )}
                       </h3>
-                      <p className="mt-1 text-sm text-[#414042]">{benefit.description}</p>
+                      <p className="mt-1 text-base text-[#414042]">{benefit.description}</p>
                     </div>
                   </div>
                 ))}

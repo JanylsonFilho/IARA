@@ -42,7 +42,7 @@ export function PatientJourneySection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center">
           <h2 className="text-balance text-3xl font-bold text-[#325565] sm:text-4xl">A Jornada do <span className="text-[#F15A22]">Paciente</span></h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-[#414042]">Veja como funciona o acompanhamento inteligente da IARA em 4 passos simples.</p>
+          <p className="mx-auto mt-4 max-w-2xl text-xl text-[#414042]">Veja como funciona o acompanhamento inteligente da IARA em 4 passos simples.</p>
         </AnimatedSection>
 
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -54,8 +54,8 @@ export function PatientJourneySection() {
                 <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#00A0DC]/20 text-[#00A0DC] transition-transform duration-300 group-hover:scale-110">
                   <step.icon className="h-7 w-7" />
                 </div>
-                <h3 className="mb-2 text-lg font-bold text-[#325565]">{step.title}</h3>
-                <p className="text-sm leading-relaxed text-[#414042]">{step.description}</p>
+                <h3 className="mb-2 text-xl font-bold text-[#325565]">{step.title}</h3>
+                <p className="text-base leading-relaxed text-[#414042]">{step.description}</p>
               </div>
             </AnimatedSection>
           ))}

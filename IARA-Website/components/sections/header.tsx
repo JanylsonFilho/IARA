@@ -44,7 +44,7 @@ export function Header() {
       
       {/* AQUI FOI ALTERADO: bg-[#F15A22] (Tom de laranja original do menu de navegação) */}
       <div className="bg-[#F15A22] w-full py-2.5 md:py-3 transition-all text-black"> 
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 sm:px-6 lg:px-8 md:flex-row text-sm md:text-base">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 sm:px-6 lg:px-8 md:flex-row text-base md:text-lg">
           
           {/* ESQUERDA: Âncoras e Acessibilidade */}
           <div className="flex flex-wrap items-center gap-4 md:gap-6">
@@ -92,7 +92,7 @@ export function Header() {
           </div>
           <div className="flex flex-col">
             <span className="text-2xl font-bold text-foreground">IARA</span>
-            <span className="text-sm text-muted-foreground">Saúde Integrada no SUS</span>
+            <span className="text-base text-muted-foreground">Saúde Integrada no SUS</span>
           </div>
         </a>
 
@@ -102,7 +102,7 @@ export function Header() {
               {/* Textos atualizados para contrastar com o fundo bege */}
               <a
                 href={link.href}
-                className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[#F15A22] after:transition-all hover:after:w-full"
+                className="relative text-base font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[#F15A22] after:transition-all hover:after:w-full"
               >
                 {link.label}
               </a>
@@ -129,7 +129,7 @@ export function Header() {
           <ul className="flex flex-col gap-4 px-4 py-6">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a href={link.href} className="block text-sm font-medium text-muted-foreground transition-colors hover:text-foreground" onClick={() => setMobileMenuOpen(false)}>
+                <a href={link.href} className="block text-base font-medium text-muted-foreground transition-colors hover:text-foreground" onClick={() => setMobileMenuOpen(false)}>
                   {link.label}
                 </a>
               </li>

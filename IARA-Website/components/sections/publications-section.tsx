@@ -43,7 +43,7 @@ export function PublicationsSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center">
           <h2 className="text-balance text-3xl font-bold text-[#325565] sm:text-4xl">Publicações <span className="text-[#F15A22]">Científicas</span></h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-[#414042]">Conheça os estudos e pesquisas que embasam o desenvolvimento da IARA.</p>
+          <p className="mx-auto mt-4 max-w-2xl text-xl text-[#414042]">Conheça os estudos e pesquisas que embasam o desenvolvimento da IARA.</p>
         </AnimatedSection>
 
         <AnimatedSection delay={200} className="mx-auto mt-12 max-w-3xl">
@@ -52,14 +52,14 @@ export function PublicationsSection() {
               <AccordionItem key={index} value={`pub-${index}`} className="overflow-hidden rounded-2xl border border-[#00A0DC]/30 bg-white px-6 transition-all duration-300 hover:border-[#F15A22]/50 data-[state=open]:border-[#F15A22]/50 data-[state=open]:shadow-lg data-[state=open]:shadow-[#F15A22]/5">
                 <AccordionTrigger className="py-6 text-left hover:no-underline [&[data-state=open]>div>span:first-child]:text-[#F15A22]">
                   <div className="flex flex-col gap-1">
-                    <span className="text-sm font-medium text-[#414042] transition-colors">{pub.year}</span>
+                    <span className="text-base font-medium text-[#414042] transition-colors">{pub.year}</span>
                     <span className="font-bold text-[#325565]">{pub.title}</span>
-                    <span className="text-sm text-[#414042]">{pub.authors}</span>
+                    <span className="text-base text-[#414042]">{pub.authors}</span>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent>
                   <div className="flex flex-col gap-4 pb-4">
-                    <p className="text-[#414042] text-justify">{pub.summary}</p>
+                    <p className="text-lg text-[#414042] text-justify">{pub.summary}</p>
                     <div className="flex flex-wrap gap-3 mt-2">
                       <Button variant="outline" size="sm" className="gap-2 rounded-full border-[#00A0DC]/30 bg-transparent text-[#325565] hover:bg-[#00A0DC]/10 hover:text-[#325565]" asChild>
                         <a href={pub.link} target="_blank" rel="noopener noreferrer">

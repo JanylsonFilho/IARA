@@ -117,14 +117,17 @@ function VideoPlayer() {
 // Seção principal exportada para a página
 export function ProjectPresentationSection() {
   return (
-    <section id="projeto" className="bg-[#FFE6CB] py-16 sm:py-24">
+    <section id="projeto" className="bg-[#00A0DC] py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <AnimatedSection>
           <div className="mb-12 text-center">
-            <h2 className="mb-4 text-balance text-3xl font-bold tracking-tight text-[#325565] sm:text-4xl">
-              O que é a <span className="text-[#F15A22]">IARA</span>?
+            {/* Título com o efeito de background apenas na metade inferior */}
+            <h2 className="mb-6 text-balance text-3xl font-bold tracking-tight sm:text-4xl leading-relaxed">
+              <span className="bg-[linear-gradient(transparent_55%,#F15A22_55%)] text-white px-3 py-1 box-decoration-clone">
+                O que é a IARA?
+              </span>
             </h2>
-            <p className="mx-auto max-w-3xl text-pretty text-lg leading-relaxed text-[#414042]">
+            <p className="mx-auto max-w-3xl text-pretty text-xl leading-relaxed text-white mt-4">
               A IARA (Inteligência Artificial para Regulação e Acompanhamento) é uma assistente virtual de saúde que utiliza inteligência artificial para acompanhar pacientes crônicos diretamente pelo WhatsApp.
             </p>
           </div>

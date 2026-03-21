@@ -24,7 +24,7 @@ export function HeroSection() {
                 IARA - <span className="text-primary">Saúde</span> na palma da mão.
               </h1>
               
-              <p className="text-pretty text-lg leading-relaxed text-[#414042] dark:text-muted-foreground sm:text-xl">
+              <p className="text-pretty text-xl leading-relaxed text-[#414042] dark:text-muted-foreground sm:text-2xl">
                 A jornada que começou como um projeto acadêmico evoluiu para a <strong className="text-primary">IARA - Assistente de Saúde Inteligente</strong>. Continuamos transformando vidas através da tecnologia, agregando o potencial transformador da IA para o amanhã.
               </p>
               
@@ -53,7 +53,7 @@ export function HeroSection() {
                   {/* Textos atualizados com o significado em tupi-guarani e sem o badge */}
                   <div className="mt-4 flex flex-col items-center text-center px-2">
                     <h3 className="mb-1 text-3xl font-bold text-[#325565] dark:text-foreground">IARA</h3>
-                    <span className="mb-3 text-sm font-semibold text-primary uppercase tracking-widest">
+                    <span className="mb-3 text-base font-semibold text-primary uppercase tracking-widest">
                       Do tupi-guarani y-îara
                     </span>
                     <p className="mb-6 text-base text-[#414042] dark:text-muted-foreground leading-relaxed">

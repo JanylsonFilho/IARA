@@ -47,7 +47,7 @@ export function FeaturesSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center">
           <h2 className="text-balance text-3xl font-bold text-[#325565] sm:text-4xl">Nossos <span className="text-[#F15A22]">Recursos</span></h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-[#414042]">Iniciativas que transformam vidas na nossa comunidade.</p>
+          <p className="mx-auto mt-4 max-w-2xl text-xl text-[#414042]">Iniciativas que transformam vidas na nossa comunidade.</p>
         </AnimatedSection>
 
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
