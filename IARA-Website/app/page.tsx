@@ -2,11 +2,11 @@
 
 import { Header } from "@/components/sections/header"
 import { HeroSection } from "@/components/sections/hero-section"
+import { AboutSection } from "@/components/sections/about-section"
 import { FeaturesSection } from "@/components/sections/features-section"
 import { PatientJourneySection } from "@/components/sections/patient-journey-section"
 import { PublicationsSection } from "@/components/sections/publications-section"
 import { Footer } from "@/components/sections/footer"
-import { ProjectPresentationSection } from "@/components/sections/project-presentation-section"
 import { ContactSection } from "@/components/sections/contact-section"
 import { FaqSection } from "@/components/sections/faq-section"
 
@@ -19,7 +19,7 @@ export default function IARALandingPage() {
       <Header />
       <main>
         <HeroSection />
-        <ProjectPresentationSection />
+        <AboutSection />
         <FeaturesSection />
         <PatientJourneySection />
         <PublicationsSection />
