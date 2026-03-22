@@ -13,25 +13,25 @@ const WhatsAppIcon = (props: any) => (
 
 export function ContactSection() {
   return (
-    <section id="contato" className="py-20 sm:py-28 bg-[#DBEAFE]">
+    <section id="contato" className="py-20 sm:py-28 bg-[#DBEAFE] dark:bg-[#1a1a1a]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center">
-          <h2 className="text-balance text-3xl font-bold text-[#00A0DC] sm:text-4xl">
+          <h2 className="text-balance text-3xl font-bold text-[#00A0DC] dark:text-white sm:text-4xl">
             Entre em Contato
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-xl text-[#414042]">
+          <p className="mx-auto mt-4 max-w-2xl text-xl text-[#414042] dark:text-white/90">
             Tem interesse em parcerias, pesquisas ou quer saber mais detalhes institucionais? Fale com a nossa equipe.
           </p>
         </AnimatedSection>
 
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <AnimatedSection delay={100}>
-            <div className="group relative flex h-full flex-col items-center overflow-hidden rounded-2xl border border-[#00A0DC]/30 bg-white p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#F15A22]/50 hover:shadow-xl hover:shadow-[#F15A22]/5">
+            <div className="group relative flex h-full flex-col items-center overflow-hidden rounded-2xl border border-[#00A0DC]/30 dark:border-[#3a3a3a]/30 bg-white dark:bg-[#2a2a2a] p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#F15A22]/50 hover:shadow-xl hover:shadow-[#F15A22]/5">
               <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#F15A22]/20 text-[#F15A22] transition-transform duration-300 group-hover:scale-110">
                 <WhatsAppIcon className="h-8 w-8" />
               </div>
-              <h3 className="mb-2 text-xl font-bold text-[#325565]">WhatsApp Institucional</h3>
-              <p className="mb-6 flex-1 text-base text-[#414042]">
+              <h3 className="mb-2 text-xl font-bold text-[#325565] dark:text-white">WhatsApp Institucional</h3>
+              <p className="mb-6 flex-1 text-base text-[#414042] dark:text-white/80">
                 Atendimento voltado para gestores de saúde e parcerias acadêmicas.
               </p>
               <Button className="w-full gap-2 rounded-full bg-[#F15A22] text-white hover:bg-[#D94610]" asChild>
@@ -44,15 +44,15 @@ export function ContactSection() {
 
           {/* Card de E-mail */}
           <AnimatedSection delay={200}>
-            <div className="group relative flex h-full flex-col items-center overflow-hidden rounded-2xl border border-[#00A0DC]/30 bg-white p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#F15A22]/50 hover:shadow-xl hover:shadow-[#F15A22]/5">
+            <div className="group relative flex h-full flex-col items-center overflow-hidden rounded-2xl border border-[#00A0DC]/30 dark:border-[#3a3a3a]/30 bg-white dark:bg-[#2a2a2a] p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#F15A22]/50 hover:shadow-xl hover:shadow-[#F15A22]/5">
               <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#00A0DC]/20 text-[#00A0DC] transition-transform duration-300 group-hover:scale-110">
                 <Mail className="h-8 w-8" />
               </div>
-              <h3 className="mb-2 text-xl font-bold text-[#325565]">E-mail</h3>
-              <p className="mb-6 flex-1 text-base text-[#414042]">
+              <h3 className="mb-2 text-xl font-bold text-[#325565] dark:text-white">E-mail</h3>
+              <p className="mb-6 flex-1 text-base text-[#414042] dark:text-white/80">
                 Envie suas propostas, dúvidas técnicas ou agende uma apresentação.
               </p>
-              <Button variant="outline" className="w-full gap-2 rounded-full border-[#00A0DC]/30 bg-transparent text-[#325565] hover:bg-[#00A0DC]/10 hover:text-[#325565]" asChild>
+              <Button variant="outline" className="w-full gap-2 rounded-full border-[#00A0DC]/30 dark:border-[#3a3a3a]/30 bg-transparent text-[#325565] dark:text-white hover:bg-[#00A0DC]/10 dark:hover:bg-[#3a3a3a]/50 hover:text-[#325565] dark:hover:text-white" asChild>
                 <a href="mailto:janylsonfilho@edu.unifor.br?subject=Interesse Institucional - Projeto IARA">
                   Enviar E-mail
                 </a>
@@ -62,15 +62,15 @@ export function ContactSection() {
 
           {/* Card de Localização */}
           <AnimatedSection delay={300}>
-            <div className="group relative flex h-full flex-col items-center overflow-hidden rounded-2xl border border-[#00A0DC]/30 bg-white p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#F15A22]/50 hover:shadow-xl hover:shadow-[#F15A22]/5">
+            <div className="group relative flex h-full flex-col items-center overflow-hidden rounded-2xl border border-[#00A0DC]/30 dark:border-[#3a3a3a]/30 bg-white dark:bg-[#2a2a2a] p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#F15A22]/50 hover:shadow-xl hover:shadow-[#F15A22]/5">
               <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#00A0DC]/20 text-[#00A0DC] transition-transform duration-300 group-hover:scale-110">
                 <MapPin className="h-8 w-8" />
               </div>
-              <h3 className="mb-2 text-xl font-bold text-[#325565]">Localização</h3>
-              <p className="mb-6 flex-1 text-base text-[#414042]">
+              <h3 className="mb-2 text-xl font-bold text-[#325565] dark:text-white">Localização</h3>
+              <p className="mb-6 flex-1 text-base text-[#414042] dark:text-white/80">
                 Desenvolvido no laboratório da Universidade de Fortaleza (UNIFOR).
               </p>
-              <Button variant="outline" className="w-full gap-2 rounded-full border-[#00A0DC]/30 bg-transparent text-[#325565] hover:bg-[#00A0DC]/10 hover:text-[#325565]" asChild>
+              <Button variant="outline" className="w-full gap-2 rounded-full border-[#00A0DC]/30 dark:border-[#3a3a3a]/30 bg-transparent text-[#325565] dark:text-white hover:bg-[#00A0DC]/10 dark:hover:bg-[#3a3a3a]/50 hover:text-[#325565] dark:hover:text-white" asChild>
                 <a href="https://www.google.com/maps/search/Universidade+de+Fortaleza+-+UNIFOR/" target="_blank" rel="noopener noreferrer">
                   Ver no Mapa
                 </a>
@@ -80,12 +80,12 @@ export function ContactSection() {
 
           {/* Card de Redes Sociais */}
           <AnimatedSection delay={400}>
-            <div className="group relative flex h-full flex-col items-center overflow-hidden rounded-2xl border border-[#00A0DC]/30 bg-white p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#F15A22]/50 hover:shadow-xl hover:shadow-[#F15A22]/5">
+            <div className="group relative flex h-full flex-col items-center overflow-hidden rounded-2xl border border-[#00A0DC]/30 dark:border-[#3a3a3a]/30 bg-white dark:bg-[#2a2a2a] p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#F15A22]/50 hover:shadow-xl hover:shadow-[#F15A22]/5">
               <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#F15A22]/20 text-[#F15A22] transition-transform duration-300 group-hover:scale-110">
                 <Linkedin className="h-8 w-8" />
               </div>
-              <h3 className="mb-2 text-xl font-bold text-[#325565]">Redes Sociais</h3>
-              <p className="mb-6 flex-1 text-base text-[#414042]">
+              <h3 className="mb-2 text-xl font-bold text-[#325565] dark:text-white">Redes Sociais</h3>
+              <p className="mb-6 flex-1 text-base text-[#414042] dark:text-white/80">
                 Acompanhe as atualizações e novidades do projeto IARA.
               </p>
               <div className="flex w-full justify-center gap-4">

@@ -41,7 +41,7 @@ export function Footer() {
       </div>
 
       {/* Área Principal do Footer com a nova cor #ff8558 */}
-      <div className="bg-[#ff8558] py-16">
+      <div className="bg-[#ff8558] dark:bg-[#2d2d2d] py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="flex flex-col items-center justify-center gap-8 mb-8">
             {/* Logos dos Parceiros */}

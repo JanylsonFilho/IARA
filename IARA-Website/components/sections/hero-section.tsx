@@ -20,11 +20,11 @@ export function HeroSection() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <AnimatedSection>
             <div className="flex flex-col gap-6">
-              <h1 className="text-balance text-4xl font-bold tracking-tight text-[#325565] dark:text-foreground sm:text-5xl lg:text-6xl">
+              <h1 className="text-balance text-4xl font-bold tracking-tight text-[#325565] dark:text-white dark:text-foreground sm:text-5xl lg:text-6xl">
                 IARA - <span className="text-primary">Saúde</span> na palma da mão.
               </h1>
               
-              <p className="text-pretty text-xl leading-relaxed text-[#414042] dark:text-muted-foreground sm:text-2xl">
+              <p className="text-pretty text-xl leading-relaxed text-[#414042] dark:text-white dark:text-muted-foreground sm:text-2xl">
                 A jornada que começou como um projeto acadêmico evoluiu para a <strong className="text-primary">IARA - Assistente de Saúde Inteligente</strong>. Continuamos transformando vidas através da tecnologia, agregando o potencial transformador da IA para o amanhã.
               </p>
               
@@ -52,11 +52,11 @@ export function HeroSection() {
                   
                   {/* Textos atualizados com o significado em tupi-guarani e sem o badge */}
                   <div className="mt-4 flex flex-col items-center text-center px-2">
-                    <h3 className="mb-1 text-3xl font-bold text-[#325565] dark:text-foreground">IARA</h3>
+                    <h3 className="mb-1 text-3xl font-bold text-[#325565] dark:text-white dark:text-foreground">IARA</h3>
                     <span className="mb-3 text-base font-semibold text-primary uppercase tracking-widest">
                       Do tupi-guarani y-îara
                     </span>
-                    <p className="mb-6 text-base text-[#414042] dark:text-muted-foreground leading-relaxed">
+                    <p className="mb-6 text-base text-[#414042] dark:text-white dark:text-muted-foreground leading-relaxed">
                       "Senhora das águas". Assim como a lenda que protege os rios, a IARA nasceu para guiar, cuidar e facilitar a sua jornada de saúde no SUS.
                     </p>
                   </div>

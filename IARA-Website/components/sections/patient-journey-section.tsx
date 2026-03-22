@@ -38,24 +38,24 @@ export function PatientJourneySection() {
   ]
 
   return (
-    <section id="jornada" className="py-20 sm:py-28 bg-[#FFE6CB]">
+    <section id="jornada" className="py-20 sm:py-28 bg-[#FFE6CB] dark:bg-[#1a1a1a]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center">
-          <h2 className="text-balance text-3xl font-bold text-[#325565] sm:text-4xl">A Jornada do Paciente</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-xl text-[#414042]">Veja como funciona o acompanhamento inteligente da IARA em 4 passos simples.</p>
+          <h2 className="text-balance text-3xl font-bold text-[#325565] dark:text-white sm:text-4xl">A Jornada do Paciente</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-xl text-[#414042] dark:text-white/90">Veja como funciona o acompanhamento inteligente da IARA em 4 passos simples.</p>
         </AnimatedSection>
 
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {journeySteps.map((step, index) => (
             <AnimatedSection key={index} delay={index * 100}>
-              <div className="group relative overflow-hidden rounded-2xl border border-[#00A0DC]/30 bg-white p-6 transition-all duration-300 hover:-translate-y-2 hover:border-[#F15A22]/50 hover:shadow-xl hover:shadow-[#F15A22]/5">
-                <span className="absolute right-4 top-4 text-5xl font-bold text-[#414042]/30">{index + 1}</span>
+              <div className="group relative overflow-hidden rounded-2xl border border-[#00A0DC]/30 dark:border-[#3a3a3a]/30 bg-white dark:bg-[#2a2a2a] p-6 transition-all duration-300 hover:-translate-y-2 hover:border-[#F15A22]/50 hover:shadow-xl hover:shadow-[#F15A22]/5">
+                <span className="absolute right-4 top-4 text-5xl font-bold text-[#414042]/30 dark:text-white/10">{index + 1}</span>
                 <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#F15A22] via-[#F15A22]/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#00A0DC]/20 text-[#00A0DC] transition-transform duration-300 group-hover:scale-110">
+                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#00A0DC]/20 dark:bg-[#00A0DC]/30 text-[#00A0DC] transition-transform duration-300 group-hover:scale-110">
                   <step.icon className="h-7 w-7" />
                 </div>
-                <h3 className="mb-2 text-xl font-bold text-[#325565]">{step.title}</h3>
-                <p className="text-base leading-relaxed text-[#414042]">{step.description}</p>
+                <h3 className="mb-2 text-xl font-bold text-[#325565] dark:text-white">{step.title}</h3>
+                <p className="text-base leading-relaxed text-[#414042] dark:text-white/80">{step.description}</p>
               </div>
             </AnimatedSection>
           ))}

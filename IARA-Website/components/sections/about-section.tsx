@@ -118,7 +118,7 @@ function VideoPlayer() {
 export function AboutSection() {
   return (
     // Fundo Unificado Azul (bg-[#00A0DC])
-    <section id="sobre" className="w-full bg-[#00A0DC] py-20 md:py-32 overflow-hidden">
+    <section id="sobre" className="w-full bg-[#00A0DC] dark:bg-[#1a1a1a] py-20 md:py-32 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 max-w-7xl">
 
         {/* =========================================
@@ -166,18 +166,18 @@ export function AboutSection() {
           
           {/* Esquerda: Elemento Visual Abstrato */}
           <AnimatedSection className="order-2 lg:order-1">
-            <div className="relative w-full aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden bg-[#DBEAFE] shadow-sm flex items-center justify-center p-8">
+            <div className="relative w-full aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden bg-[#DBEAFE] dark:bg-[#2a2a2a] shadow-sm flex items-center justify-center p-8">
               {/* Ícones decorativos de fundo */}
               <Heart className="w-40 h-40 text-[#F15A22] opacity-10 absolute -bottom-10 -left-10" />
               <ShieldCheck className="w-32 h-32 text-[#009889] opacity-10 absolute top-10 -right-5" />
               
               {/* Card centralizado na imagem */}
-              <div className="text-center z-10 space-y-5 bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-white max-w-sm">
+              <div className="text-center z-10 space-y-5 bg-white/80 dark:bg-[#3a3a3a]/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-white dark:border-[#3a3a3a] max-w-sm">
                 <div className="w-16 h-16 bg-[#F15A22]/10 rounded-2xl flex items-center justify-center mx-auto">
                   <Heart className="w-8 h-8 text-[#F15A22]" />
                 </div>
-                <h4 className="text-2xl font-bold text-[#325565]">Cuidado Contínuo</h4>
-                <p className="text-[#325565]/70">
+                <h4 className="text-2xl font-bold text-[#325565] dark:text-white">Cuidado Contínuo</h4>
+                <p className="text-[#325565]/70 dark:text-white/70">
                   Conectando pacientes e profissionais de forma inteligente e humanizada.
                 </p>
               </div>

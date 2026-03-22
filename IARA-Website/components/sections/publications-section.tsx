@@ -39,7 +39,7 @@ export function PublicationsSection() {
   ]
 
   return (
-    <section id="publicacoes" className="bg-primary py-20 sm:py-28">
+    <section id="publicacoes" className="bg-primary dark:bg-[#1a1a1a] py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center">
           <h2 className="text-balance text-3xl font-bold text-primary-foreground sm:text-4xl">Publicações Científicas</h2>
