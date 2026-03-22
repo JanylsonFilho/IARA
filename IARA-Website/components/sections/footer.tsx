@@ -1,7 +1,8 @@
 "use client"
 
 import { AnimatedSection } from "@/components/animated-section"
-import { Stethoscope, ChevronUp } from "lucide-react"
+import { ChevronUp } from "lucide-react"
+import Image from "next/image"
 
 export function Footer() {
   const navLinks = [
@@ -42,14 +43,28 @@ export function Footer() {
       {/* Área Principal do Footer com a nova cor #ff8558 */}
       <div className="bg-[#ff8558] py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="flex flex-col items-center text-center">
-            {/* Logo com fundo branco e ícone laranja para dar contraste com o fundo novo */}
-            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-md">
-              <Stethoscope className="h-8 w-8 text-[#F15A22]" />
+          <AnimatedSection className="flex flex-col items-center justify-center gap-8 mb-8">
+            {/* Logos dos Parceiros */}
+            <div className="flex flex-wrap items-center justify-center gap-8">
+              <div className="flex items-center justify-center">
+                <Image 
+                  src="/CITINOVA_NEGATIVO.png" 
+                  alt="Citinova Logo" 
+                  width={200} 
+                  height={100}
+                  className="h-28 w-auto"
+                />
+              </div>
+              <div className="flex items-center justify-center">
+                <Image 
+                  src="/logo-saude-prefeitura.png" 
+                  alt="Prefeitura Logo" 
+                  width={120} 
+                  height={60}
+                  className="h-16 w-auto"
+                />
+              </div>
             </div>
-            <p className="mt-4 text-white font-medium text-xl">
-              Saúde Integrada no <span className="font-bold">Sistema Único de Saúde</span>
-            </p>
           </AnimatedSection>
 
           <AnimatedSection delay={100} className="mt-8">

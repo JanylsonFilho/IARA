@@ -39,29 +39,33 @@ export function PublicationsSection() {
   ]
 
   return (
-    <section id="publicacoes" className="bg-[#FFE6CB] py-20 sm:py-28">
+    <section id="publicacoes" className="bg-primary py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center">
-          <h2 className="text-balance text-3xl font-bold text-[#325565] sm:text-4xl">Publicações Científicas</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-xl text-[#414042]">Conheça os estudos e pesquisas que embasam o desenvolvimento da IARA.</p>
+          <h2 className="text-balance text-3xl font-bold text-primary-foreground sm:text-4xl">Publicações Científicas</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-xl text-primary-foreground/90">Conheça os estudos e pesquisas que embasam o desenvolvimento da IARA.</p>
         </AnimatedSection>
 
         <AnimatedSection delay={200} className="mx-auto mt-12 max-w-3xl">
           <Accordion type="single" collapsible className="w-full space-y-4">
             {publications.map((pub, index) => (
-              <AccordionItem key={index} value={`pub-${index}`} className="overflow-hidden rounded-2xl border border-[#00A0DC]/30 bg-white px-6 transition-all duration-300 hover:border-[#F15A22]/50 data-[state=open]:border-[#F15A22]/50 data-[state=open]:shadow-lg data-[state=open]:shadow-[#F15A22]/5">
-                <AccordionTrigger className="py-6 text-left hover:no-underline [&[data-state=open]>div>span:first-child]:text-[#F15A22]">
+              <AccordionItem 
+                key={index} 
+                value={`pub-${index}`} 
+                className="overflow-hidden rounded-2xl border-none bg-card px-6 shadow-md transition-all duration-300 hover:shadow-lg data-[state=open]:shadow-xl"
+              >
+                <AccordionTrigger className="py-6 text-left hover:no-underline [&[data-state=open]>div>span:first-child]:text-primary">
                   <div className="flex flex-col gap-1">
-                    <span className="text-base font-medium text-[#414042] transition-colors">{pub.year}</span>
-                    <span className="font-bold text-[#325565]">{pub.title}</span>
-                    <span className="text-base text-[#414042]">{pub.authors}</span>
+                    <span className="text-base font-medium text-muted-foreground transition-colors">{pub.year}</span>
+                    <span className="font-bold text-card-foreground">{pub.title}</span>
+                    <span className="text-base text-muted-foreground">{pub.authors}</span>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent>
                   <div className="flex flex-col gap-4 pb-4">
-                    <p className="text-lg text-[#414042] text-justify">{pub.summary}</p>
+                    <p className="text-lg text-muted-foreground text-justify">{pub.summary}</p>
                     <div className="flex flex-wrap gap-3 mt-2">
-                      <Button variant="outline" size="sm" className="gap-2 rounded-full border-[#00A0DC]/30 bg-transparent text-[#325565] hover:bg-[#00A0DC]/10 hover:text-[#325565]" asChild>
+                      <Button variant="outline" size="sm" className="gap-2 rounded-full border-primary text-primary hover:bg-primary hover:text-primary-foreground" asChild>
                         <a href={pub.link} target="_blank" rel="noopener noreferrer">
                           <ExternalLink className="h-4 w-4" />
                           Acessar Artigo

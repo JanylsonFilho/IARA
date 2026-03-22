@@ -2,7 +2,7 @@
 
 import { AnimatedSection } from "@/components/animated-section"
 import { Button } from "@/components/ui/button"
-import { Mail, MapPin } from "lucide-react"
+import { Mail, MapPin, Linkedin, Twitter, Facebook, Instagram } from "lucide-react"
 
 // Ícone do WhatsApp padronizado
 const WhatsAppIcon = (props: any) => (
@@ -13,10 +13,10 @@ const WhatsAppIcon = (props: any) => (
 
 export function ContactSection() {
   return (
-    <section id="contato" className="py-20 sm:py-28 bg-[#FFE6CB]">
+    <section id="contato" className="py-20 sm:py-28 bg-[#DBEAFE]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center">
-          <h2 className="text-balance text-3xl font-bold text-[#325565] sm:text-4xl">
+          <h2 className="text-balance text-3xl font-bold text-[#00A0DC] sm:text-4xl">
             Entre em Contato
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-xl text-[#414042]">
@@ -24,7 +24,7 @@ export function ContactSection() {
           </p>
         </AnimatedSection>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-3">
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <AnimatedSection delay={100}>
             <div className="group relative flex h-full flex-col items-center overflow-hidden rounded-2xl border border-[#00A0DC]/30 bg-white p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#F15A22]/50 hover:shadow-xl hover:shadow-[#F15A22]/5">
               <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#F15A22]/20 text-[#F15A22] transition-transform duration-300 group-hover:scale-110">
@@ -75,6 +75,33 @@ export function ContactSection() {
                   Ver no Mapa
                 </a>
               </Button>
+            </div>
+          </AnimatedSection>
+
+          {/* Card de Redes Sociais */}
+          <AnimatedSection delay={400}>
+            <div className="group relative flex h-full flex-col items-center overflow-hidden rounded-2xl border border-[#00A0DC]/30 bg-white p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#F15A22]/50 hover:shadow-xl hover:shadow-[#F15A22]/5">
+              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#F15A22]/20 text-[#F15A22] transition-transform duration-300 group-hover:scale-110">
+                <Linkedin className="h-8 w-8" />
+              </div>
+              <h3 className="mb-2 text-xl font-bold text-[#325565]">Redes Sociais</h3>
+              <p className="mb-6 flex-1 text-base text-[#414042]">
+                Acompanhe as atualizações e novidades do projeto IARA.
+              </p>
+              <div className="flex w-full justify-center gap-4">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F15A22]/10 text-[#F15A22] transition-all duration-300 hover:bg-[#F15A22] hover:text-white">
+                  <Linkedin className="h-5 w-5" />
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-[#00A0DC]/10 text-[#00A0DC] transition-all duration-300 hover:bg-[#00A0DC] hover:text-white">
+                  <Twitter className="h-5 w-5" />
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F15A22]/10 text-[#F15A22] transition-all duration-300 hover:bg-[#F15A22] hover:text-white">
+                  <Instagram className="h-5 w-5" />
+                </a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-[#00A0DC]/10 text-[#00A0DC] transition-all duration-300 hover:bg-[#00A0DC] hover:text-white">
+                  <Facebook className="h-5 w-5" />
+                </a>
+              </div>
             </div>
           </AnimatedSection>
         </div>
