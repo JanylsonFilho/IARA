@@ -6,11 +6,16 @@ import { Stethoscope, ChevronUp } from "lucide-react"
 export function Footer() {
   const navLinks = [
     { href: "#inicio", label: "Inicio" },
-    { href: "#projeto", label: "O Projeto" },
-    { href: "#sobre", label: "Quem Somos" },
-    { href: "#jornada", label: "Como Funciona" },
-    { href: "#vantagens", label: "Vantagens" },
+    { href: "#sobre", label: "Sobre" },
+    { 
+      label: "Explore", 
+      items: [
+        { href: "#recursos", label: "Nossos Recursos" },
+        { href: "#jornada", label: "Jornada do Paciente" }
+      ]
+    },
     { href: "#publicacoes", label: "Publicações" },
+    { href: "#faq", label: "Dúvidas Frequentes" },
     { href: "#contato", label: "Contato" },
   ]
 
@@ -50,11 +55,25 @@ export function Footer() {
           <AnimatedSection delay={100} className="mt-8">
             <ul className="flex flex-wrap items-center justify-center gap-6 text-base font-medium">
               {navLinks.map((link, index) => (
-                <li key={link.href} className="flex items-center">
-                  <a href={link.href} className="text-white hover:text-white/70 transition-colors">
-                    {link.label}
-                  </a>
-                  {/* Divisores ajustados para branco com opacidade */}
+                <li key={link.label || link.href} className="flex items-center">
+                  {link.items ? (
+                    <>
+                      {link.items.map((item, idx) => (
+                        <a
+                          key={idx}
+                          href={item.href}
+                          className="text-white hover:text-white/70 transition-colors"
+                        >
+                          {item.label}
+                          {idx < link.items.length - 1 && <span className="mx-2">•</span>}
+                        </a>
+                      ))}
+                    </>
+                  ) : (
+                    <a href={link.href} className="text-white hover:text-white/70 transition-colors">
+                      {link.label}
+                    </a>
+                  )}
                   {index < navLinks.length - 1 && <span className="ml-6 text-white/40">|</span>}
                 </li>
               ))}

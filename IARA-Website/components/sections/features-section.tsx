@@ -43,7 +43,7 @@ export function FeaturesSection() {
   ]
 
   return (
-    <section className="bg-[#FFE6CB] py-20 sm:py-28">
+    <section id="recursos" className="bg-[#FFE6CB] py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center">
           <h2 className="text-balance text-3xl font-bold text-[#325565] sm:text-4xl">Nossos Recursos</h2>

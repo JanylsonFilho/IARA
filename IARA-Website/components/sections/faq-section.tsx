@@ -14,6 +14,14 @@ const faqs = [
     answer: "A IARA auxilia profissionais de saúde oferecendo suporte com inteligência artificial para otimizar processos e melhorar a jornada do paciente."
   },
   {
+    question: "Quais são os benefícios da IARA?",
+    answer: "A IARA oferece múltiplos benefícios: disponibilidade 24/7 no WhatsApp para os pacientes, respostas baseadas em evidências científicas, lembretes automáticos de medicamentos e consultas, redução de filas no sistema de saúde, e melhor acompanhamento contínuo entre consultas. Tudo isso contribui para democratizar o acesso à saúde de qualidade no SUS."
+  },
+  {
+    question: "Como a IARA beneficia os profissionais de saúde?",
+    answer: "A IARA otimiza significativamente o trabalho dos profissionais de saúde: permite transcrição automática de voz para texto nos prontuários, economizando tempo valioso; reduz tarefas administrativas para que possam dedicar mais tempo ao cuidado direto com os pacientes; e oferece visibilidade das dúvidas e necessidades dos pacientes entre as consultas, melhorando o acompanhamento geral."
+  },
+  {
     question: "É seguro compartilhar meus dados médicos?",
     answer: "Sim, a IARA segue todas as normas de segurança e privacidade (como a LGPD) para garantir que as informações dos pacientes estejam sempre protegidas."
   },

@@ -1,13 +1,14 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Stethoscope, Menu, X } from "lucide-react"
+import { Stethoscope, Menu, X, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useTheme } from "next-themes"
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [sobreDropdownOpen, setSobreDropdownOpen] = useState(false)
   
   // Estados e lógicas para acessibilidade
   const { theme, setTheme } = useTheme()
@@ -32,11 +33,24 @@ export function Header() {
 
   const navLinks = [
     { href: "#inicio", label: "Início" },
-    { href: "#projeto", label: "O Projeto" },
-    { href: "#sobre", label: "Quem Somos" },
-    { href: "#jornada", label: "Como Funciona" },
-    { href: "#vantagens", label: "Vantagens" },
+    { 
+      label: "Sobre", 
+      dropdown: true,
+      items: [
+        { href: "#sobre", label: "O que é" },
+        { href: "#sobre", label: "Nossa Abordagem", anchor: "abordagem" }
+      ]
+    },
+    { 
+      label: "Explore", 
+      dropdown: true,
+      items: [
+        { href: "#recursos", label: "Nossos Recursos" },
+        { href: "#jornada", label: "Jornada do Paciente" }
+      ]
+    },
     { href: "#publicacoes", label: "Publicações" },
+    { href: "#faq", label: "Dúvidas Frequentes" },
   ]
 
   return (
@@ -98,14 +112,38 @@ export function Header() {
 
         <ul className="hidden items-center gap-8 lg:flex">
           {navLinks.map((link) => (
-            <li key={link.href}>
-              {/* Textos atualizados para contrastar com o fundo bege */}
-              <a
-                href={link.href}
-                className="relative text-base font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[#F15A22] after:transition-all hover:after:w-full"
-              >
-                {link.label}
-              </a>
+            <li key={link.label} className="relative group">
+              {link.dropdown ? (
+                <div className="relative">
+                  <button
+                    className="flex items-center gap-1 text-base font-medium text-muted-foreground transition-colors hover:text-foreground"
+                    onClick={() => setSobreDropdownOpen(!sobreDropdownOpen)}
+                  >
+                    {link.label}
+                    <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
+                  </button>
+                  {/* Dropdown Menu */}
+                  <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    {link.items?.map((item, idx) => (
+                      <a
+                        key={idx}
+                        href={item.href}
+                        className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted first:rounded-t-md last:rounded-b-md transition-colors"
+                        onClick={() => setSobreDropdownOpen(false)}
+                      >
+                        {item.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <a
+                  href={link.href}
+                  className="relative text-base font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[#F15A22] after:transition-all hover:after:w-full"
+                >
+                  {link.label}
+                </a>
+              )}
             </li>
           ))}
         </ul>

@@ -1,10 +1,10 @@
 "use client"
 
 import { useState, useRef } from "react"
-import { Play, Pause, Volume2, VolumeX, Maximize, AlertCircle, Heart } from "lucide-react"
+import { Play, Pause, Volume2, VolumeX, Maximize, Heart, ShieldCheck } from "lucide-react"
 import { AnimatedSection } from "@/components/animated-section"
 
-// Componente do Player de Vídeo
+// Componente do Player de Vídeo (Mantido intacto)
 function VideoPlayer() {
   const [isPlaying, setIsPlaying] = useState(false)
   const [isMuted, setIsMuted] = useState(false)
@@ -117,128 +117,108 @@ function VideoPlayer() {
 // Super Seção Unificada: Sobre
 export function AboutSection() {
   return (
-    <section id="sobre">
-      {/* BLOCO 1: O que é a IARA */}
-      <div className="bg-[#00A0DC] py-16 sm:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {/* Título principal da seção "Sobre" em verde */}
-          <AnimatedSection className="text-center mb-12">
-            <h2 className="text-xl font-bold text-[#009889] uppercase tracking-widest">Sobre</h2>
+    // Fundo Unificado Azul (bg-[#00A0DC])
+    <section id="sobre" className="w-full bg-[#00A0DC] py-20 md:py-32 overflow-hidden">
+      <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+
+        {/* =========================================
+            TÍTULO PRINCIPAL DA SEÇÃO (Centralizado e Laranja)
+        ========================================= */}
+        <AnimatedSection className="mb-16 md:mb-24 text-center">
+          <h2 className="text-balance text-4xl font-bold text-white sm:text-5xl lg:text-6xl">Sobre</h2>
+        </AnimatedSection>
+
+        {/* =========================================
+            BLOCO 1: O que é a IARA? 
+            (Texto na Esquerda, Vídeo na Direita)
+        ========================================= */}
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-center mb-24 lg:mb-32">
+          <AnimatedSection>
+            <div className="flex flex-col items-start text-left">
+              {/* Título "O que é a IARA" com destaque laranja */}
+              <h3 className="mb-6 text-balance text-3xl font-bold tracking-tight sm:text-4xl leading-relaxed">
+                <span className="bg-[linear-gradient(transparent_55%,#F15A22_55%)] text-white px-3 py-1 box-decoration-clone">
+                  O que é a IARA ?
+                </span>
+              </h3>
+              {/* Texto em BRANCO (text-white) */}
+              <p className="text-lg md:text-xl leading-relaxed text-white mt-4">
+                A IARA (Inteligência Artificial para Regulação e Acompanhamento) é uma assistente virtual de saúde que utiliza inteligência artificial para acompanhar pacientes crônicos diretamente pelo WhatsApp.
+                <br /><br />
+                Ela automatiza a triagem, responde a dúvidas comuns e monitora o progresso do tratamento, liberando os profissionais de saúde para focar no que realmente importa: o atendimento humano e especializado.
+              </p>
+            </div>
           </AnimatedSection>
 
-          <div className="grid gap-12 items-center lg:grid-cols-2 lg:gap-16">
-            <AnimatedSection>
-              <div className="flex flex-col">
-                {/* Subtítulo "O que é a IARA?" em laranja */}
-                <h3 className="mb-6 text-balance text-3xl font-bold tracking-tight sm:text-4xl leading-relaxed">
-                  <span className="bg-[linear-gradient(transparent_55%,#F15A22_55%)] text-white px-3 py-1 box-decoration-clone">
-                    O que é a IARA?
-                  </span>
-                </h3>
-                <p className="text-pretty text-xl leading-relaxed text-white">
-                  A IARA (Inteligência Artificial para Regulação e Acompanhamento) é uma assistente virtual de saúde que utiliza inteligência artificial para acompanhar pacientes crônicos diretamente pelo WhatsApp. Desenvolvida como uma solução inovadora para o SUS, a IARA fornece orientações baseadas em evidências científicas, lembretes automáticos de medicamentos e consultas, além de conectar pacientes com profissionais de saúde quando necessário. Nossa missão é democratizar o acesso à saúde de qualidade, reduzindo filas e garantindo que cada paciente receba o acompanhamento contínuo que merece.
-                </p>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection delay={200}>
+          <AnimatedSection delay={200}>
+            <div className="w-full">
               <VideoPlayer />
-            </AnimatedSection>
-          </div>
+            </div>
+          </AnimatedSection>
         </div>
-      </div>
 
-      {/* BLOCO 2: Uma Nova Abordagem (Problema/Solução) - Layout Alternado */}
-      <div className="bg-[#FFE6CB] py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 items-center lg:grid-cols-2 lg:gap-16">
-            {/* Esquerda: Cards de Problema e Solução - Ordem visual invertida no desktop */}
-            <div className="order-2 lg:order-1">
-              <div className="grid gap-8">
-                {/* Card: O Problema */}
-                <AnimatedSection delay={100}>
-                  <div className="group relative overflow-hidden rounded-2xl border border-red-200/30 bg-red-50 p-8 transition-all duration-300 hover:shadow-xl">
-                    <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-red-500 to-transparent" />
-                    <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-red-500/20">
-                      <AlertCircle className="h-7 w-7 text-red-500" />
-                    </div>
-                    <h4 className="mb-4 text-2xl font-bold text-[#325565]">O Problema</h4>
-                    <p className="mb-6 text-lg text-[#414042]">A realidade atual do acompanhamento de saúde</p>
-                    <ul className="space-y-4">
-                      {[
-                        "Longos intervalos entre consultas médicas",
-                        "Falta de comunicação contínua com profissionais de saúde",
-                        "Dificuldade em tirar dúvidas sobre medicamentos e sintomas",
-                        "Filas extensas para agendamento de consultas",
-                        "Desconexão entre o paciente e seu tratamento",
-                      ].map((item, index) => (
-                        <li key={index} className="flex items-start gap-3">
-                          <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-500/20 text-xs font-bold text-red-500">
-                            {index + 1}
-                          </span>
-                          <span className="text-base text-[#414042]">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </AnimatedSection>
 
-                {/* Card: A Solução */}
-                <AnimatedSection delay={200}>
-                  <div className="group relative overflow-hidden rounded-2xl border border-[#F15A22]/30 bg-[#F15A22]/5 p-8 transition-all duration-300 hover:shadow-xl hover:shadow-[#F15A22]/10">
-                    <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#F15A22] to-transparent" />
-                    <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-[#F15A22]/20">
-                      <Heart className="h-7 w-7 text-[#F15A22]" />
-                    </div>
-                    <h4 className="mb-4 text-2xl font-bold text-[#325565]">A Solução</h4>
-                    <p className="mb-6 text-lg text-[#414042]">Como a IARA preenche essa lacuna</p>
-                    <ul className="space-y-4">
-                      {[
-                        "Assistente de IA disponível 24/7 no WhatsApp",
-                        "Suporte contínuo entre as consultas médicas",
-                        "Respostas confiáveis baseadas em evidências científicas",
-                        "Lembretes automáticos de medicamentos e consultas",
-                        "Integração direta com teleconsultas do SUS",
-                      ].map((item, index) => (
-                        <li key={index} className="flex items-start gap-3">
-                          <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#F15A22]/20 text-xs font-bold text-[#F15A22]">
-                            ✓
-                          </span>
-                          <span className="text-base text-[#414042]">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </AnimatedSection>
+        {/* =========================================
+            BLOCO 2: Uma Nova Abordagem
+            (Elemento Visual na Esquerda, Texto na Direita)
+        ========================================= */}
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          
+          {/* Esquerda: Elemento Visual Abstrato */}
+          <AnimatedSection className="order-2 lg:order-1">
+            <div className="relative w-full aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden bg-[#DBEAFE] shadow-sm flex items-center justify-center p-8">
+              {/* Ícones decorativos de fundo */}
+              <Heart className="w-40 h-40 text-[#F15A22] opacity-10 absolute -bottom-10 -left-10" />
+              <ShieldCheck className="w-32 h-32 text-[#009889] opacity-10 absolute top-10 -right-5" />
+              
+              {/* Card centralizado na imagem */}
+              <div className="text-center z-10 space-y-5 bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-white max-w-sm">
+                <div className="w-16 h-16 bg-[#F15A22]/10 rounded-2xl flex items-center justify-center mx-auto">
+                  <Heart className="w-8 h-8 text-[#F15A22]" />
+                </div>
+                <h4 className="text-2xl font-bold text-[#325565]">Cuidado Contínuo</h4>
+                <p className="text-[#325565]/70">
+                  Conectando pacientes e profissionais de forma inteligente e humanizada.
+                </p>
               </div>
             </div>
+          </AnimatedSection>
 
-            {/* Direita: Descrição e contexto - Ordem visual invertida no desktop */}
-            <AnimatedSection delay={300} className="order-1 lg:order-2">
-              <div className="flex flex-col">
-                <h3 className="text-balance text-3xl font-bold text-[#325565] sm:text-4xl mb-6">
-                  Uma Nova Abordagem para o
-                  <span className="text-[#F15A22] block">Cuidado</span>
-                </h3>
-                <p className="text-pretty text-xl leading-relaxed text-[#414042] mb-8">
-                  Entenda como a IARA transforma a experiência de saúde de pacientes crônicos no SUS.
+          {/* Direita: Textos Consolidados (Problema + Solução em Narrativa) */}
+          <AnimatedSection delay={200} className="order-1 lg:order-2">
+            <div className="flex flex-col items-start text-left">
+              {/* Título com o efeito de background */}
+              <h3 className="mb-8 text-balance text-3xl font-bold tracking-tight sm:text-4xl leading-relaxed">
+                <span className="bg-[linear-gradient(transparent_55%,#F15A22_55%)] text-white px-3 py-1 box-decoration-clone inline-block whitespace-nowrap">
+                  Uma nova abordagem para o cuidado
+                </span>
+              </h3>
+              
+              {/* Texto em BRANCO (text-white) */}
+              <div className="space-y-6 text-lg text-white leading-relaxed">
+                <p>
+                  A realidade atual do sistema de saúde muitas vezes impõe longos intervalos entre consultas e filas extensas, deixando o paciente desconectado do seu próprio tratamento. É comum surgirem dúvidas sobre medicamentos ou sintomas sem que haja um canal rápido de comunicação com os profissionais.
                 </p>
-                <div className="flex items-center gap-4">
-                  <div className="h-12 w-1 bg-gradient-to-b from-[#F15A22] to-[#009889]" />
-                  <p className="text-base text-[#414042] leading-relaxed">
-                    Ao identificar os desafios reais que enfrentam os pacientes, a IARA surge como uma resposta integrada, oferecendo suporte humanizado através da tecnologia.
+                {/* Destaque lateral */}
+                <div className="pl-4 border-l-4 border-[#009889]">
+                  <p className="font-medium text-white">
+                    A IARA preenche exatamente essa lacuna. Funcionando 24 horas por dia, 7 dias por semana pelo WhatsApp, ela oferece suporte contínuo entre as consultas.
                   </p>
                 </div>
+                <p>
+                  Com respostas confiáveis baseadas em evidências científicas, lembretes automáticos e integração direta com o SUS, a IARA transforma a jornada do paciente, garantindo que ele nunca se sinta desamparado no seu processo de cura.
+                </p>
               </div>
-            </AnimatedSection>
-          </div>
+            </div>
+          </AnimatedSection>
+
         </div>
       </div>
     </section>
   )
 }
 
-// Mantendo a exportação anterior para compatibilidade
+// Mantendo a exportação anterior para compatibilidade com o page.tsx
 export function ProjectPresentationSection() {
   return <AboutSection />
 }
